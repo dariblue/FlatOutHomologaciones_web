@@ -968,4 +968,37 @@ body {
   .hero-logo-image {
     max-height: 250px;
   }
+
+  /* Botón "Enviar consulta" centrado y ancho armónico */
+  .contact-form button[type="submit"] {
+    display: block;
+    margin: 24px auto 0 auto;
+    width: 90%;
+    max-width: 320px;
+    min-width: 180px;
+  }
+
+  /* Botón "Síguenos en Instagram" centrado */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .social-link {
+    width: 90%;
+    max-width: 320px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Texto del footer centrado */
+  .footer-logo p {
+    text-align: center;
+  }
+
+  /* Texto dentro de contacto centrado */
+  #contacto .section p,
+  #contacto .container > p {
+    text-align: center;
+  }
 }

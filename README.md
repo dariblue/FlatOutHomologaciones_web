@@ -19,3 +19,4 @@ Wenas.
 ### No tan importante:
 
 - Añadir nuevas funcionalidades
+- Podriamos crear una accion rapida que creen eventos en el calendario con los eventos de la empresa
