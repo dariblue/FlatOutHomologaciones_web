@@ -996,6 +996,10 @@ body {
     text-align: center;
   }
 
+  .footer-contact p {
+    text-align: center;
+  }
+
   /* Texto dentro de contacto centrado */
   #contacto .section p,
   #contacto .container > p {
