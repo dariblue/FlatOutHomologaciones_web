@@ -252,7 +252,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize any additional features
   initializeCounters()
+
+  // Hero Background Slider
+  initializeHeroSlider()
 })
+
+// Hero Background Slider function
+function initializeHeroSlider() {
+  const slides = document.querySelectorAll('.hero-bg-slide')
+  let currentSlide = 0
+
+  if (slides.length === 0) return
+
+  // Function to show specific slide
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active')
+      if (i === index) {
+        slide.classList.add('active')
+      }
+    })
+  }
+
+  // Function to go to next slide
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length
+    showSlide(currentSlide)
+  }
+
+  // Auto-advance slides every 5 seconds
+  setInterval(nextSlide, 5000)
+
+  // Optional: Add keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      nextSlide()
+    } else if (e.key === 'ArrowLeft') {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length
+      showSlide(currentSlide)
+    }
+  })
+}
 
 // Counter animation function
 function initializeCounters() {
