@@ -122,34 +122,149 @@
     <!-- Homologaciones Section -->
     <section id="homologaciones" class="section">
         <div class="container">
-            <h2>Homologaciones</h2>
-            <p>Especializados en la homologación de todo tipo de modificaciones vehiculares. Nuestro equipo de expertos se encarga de todos los trámites necesarios para legalizar tus modificaciones.</p>
+            <h2>Kits de Homologación</h2>
+            <p>Ofrecemos paquetes completos de homologación adaptados a tus necesidades. Cada kit incluye todas las tramitaciones necesarias para legalizar las modificaciones de tu vehículo.</p>
             
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=300&h=200&fit=crop" alt="Proyecto 1">
-                    <div class="project-info">
-                        <h3>Homologación Escape Deportivo</h3>
-                        <p>BMW M3 - Sistema de escape completo homologado</p>
+            <div class="kit-cards-grid">
+                <!-- Kit Estética -->
+                <div class="kit-card">
+                    <div class="kit-header">
+                        <i class="fas fa-palette"></i>
+                        <h3>Kit Estética</h3>
+                        <div class="kit-price">
+                            <span class="price-amount">899€</span>
+                            <span class="price-note">*Precio orientativo</span>
+                        </div>
                     </div>
+                    <div class="kit-content">
+                        <h4>Homologaciones incluidas:</h4>
+                        <ul class="kit-features">
+                            <li><i class="fas fa-check"></i> Alerones y spoilers</li>
+                            <li><i class="fas fa-check"></i> Faldones y extensiones</li>
+                            <li><i class="fas fa-check"></i> Llantas hasta 20"</li>
+                            <li><i class="fas fa-check"></i> Vinilo y rotulación</li>
+                            <li><i class="fas fa-check"></i> Luces LED exteriores</li>
+                            <li><i class="fas fa-check"></i> Modificaciones de carrocería menores</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-kit" onclick="openKitModal('estetica')">
+                        <i class="fas fa-paper-plane"></i>
+                        Solicitar Presupuesto
+                    </button>
                 </div>
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&h=200&fit=crop" alt="Proyecto 2">
-                    <div class="project-info">
-                        <h3>Kit Carrocería Widebody</h3>
-                        <p>Nissan GTR - Homologación kit carrocería completo</p>
+
+                <!-- Kit Performance -->
+                <div class="kit-card featured">
+                    <div class="featured-badge">MÁS POPULAR</div>
+                    <div class="kit-header">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Kit Performance</h3>
+                        <div class="kit-price">
+                            <span class="price-amount">1.299€</span>
+                            <span class="price-note">*Precio orientativo</span>
+                        </div>
                     </div>
+                    <div class="kit-content">
+                        <h4>Homologaciones incluidas:</h4>
+                        <ul class="kit-features">
+                            <li><i class="fas fa-check"></i> Sistema de escape deportivo</li>
+                            <li><i class="fas fa-check"></i> Filtro de aire de alto flujo</li>
+                            <li><i class="fas fa-check"></i> Suspensión deportiva/roscada</li>
+                            <li><i class="fas fa-check"></i> Barras estabilizadoras</li>
+                            <li><i class="fas fa-check"></i> Frenos de mayor tamaño</li>
+                            <li><i class="fas fa-check"></i> Modificaciones de motor básicas</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-kit" onclick="openKitModal('performance')">
+                        <i class="fas fa-paper-plane"></i>
+                        Solicitar Presupuesto
+                    </button>
                 </div>
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&h=200&fit=crop" alt="Proyecto 3">
-                    <div class="project-info">
-                        <h3>Suspensión Roscada</h3>
-                        <p>Audi A4 - Sistema de suspensión neumática homologado</p>
+
+                <!-- Kit 4x4 -->
+                <div class="kit-card">
+                    <div class="kit-header">
+                        <i class="fas fa-mountain"></i>
+                        <h3>Kit 4x4</h3>
+                        <div class="kit-price">
+                            <span class="price-amount">1.599€</span>
+                            <span class="price-note">*Precio orientativo</span>
+                        </div>
                     </div>
+                    <div class="kit-content">
+                        <h4>Homologaciones incluidas:</h4>
+                        <ul class="kit-features">
+                            <li><i class="fas fa-check"></i> Elevación de suspensión</li>
+                            <li><i class="fas fa-check"></i> Neumáticos de mayor diámetro</li>
+                            <li><i class="fas fa-check"></i> Protecciones inferiores</li>
+                            <li><i class="fas fa-check"></i> Barra de luces adicionales</li>
+                            <li><i class="fas fa-check"></i> Enganche de remolque</li>
+                            <li><i class="fas fa-check"></i> Cabrestante (si aplica)</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-kit" onclick="openKitModal('4x4')">
+                        <i class="fas fa-paper-plane"></i>
+                        Solicitar Presupuesto
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal para solicitud de presupuesto -->
+    <div id="kitModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Solicitar Presupuesto</h3>
+                <span class="close" onclick="closeKitModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="kitQuoteForm">
+                    <input type="hidden" id="selectedKit" name="kit" value="">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="kitName">Nombre completo *</label>
+                            <input type="text" id="kitName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="kitEmail">Email *</label>
+                            <input type="email" id="kitEmail" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="kitPhone">Teléfono</label>
+                            <input type="tel" id="kitPhone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="kitVehicle">Vehículo *</label>
+                            <input type="text" id="kitVehicle" name="vehicle" placeholder="Marca, modelo y año" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kitModifications">Modificaciones específicas que deseas incluir</label>
+                        <textarea id="kitModifications" name="modifications" rows="3" placeholder="Describe las modificaciones específicas que te interesan..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kitNotes">Información adicional</label>
+                        <textarea id="kitNotes" name="notes" rows="2" placeholder="Cualquier información adicional que consideres relevante..."></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeKitModal()">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Solicitud
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Importaciones Section -->
     <section id="importaciones" class="section bg-dark">
