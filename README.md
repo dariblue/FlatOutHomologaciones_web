@@ -19,11 +19,11 @@ Wenas.
 ## Cosas importantes a cambiar:  
 
 - [X] Añadir kits de homologaciones (Por revisar precios y cosas incluidas)
-- [] Modificar datos de coches historicos
-- [] Gestionar el orden de los componentes de la pagina 
-- [] Poner los proyectos destacados de la empresa
-- [] Poner el evento que hicieron el otro dia y poner otro proximamente
-- [] Añadir en el footer redes sociales
+- [ ] Modificar datos de coches historicos
+- [ ] Gestionar el orden de los componentes de la pagina 
+- [ ] Poner los proyectos destacados de la empresa
+- [ ] Poner el evento que hicieron el otro dia y poner otro proximamente
+- [ ] Añadir en el footer redes sociales
 
 
 
