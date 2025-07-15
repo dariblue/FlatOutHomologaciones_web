@@ -13,6 +13,6 @@ Disallow: /*.css$
 Disallow: /*.js$
 
 # Allow important assets
-Allow: /assets/logo.png
-Allow: /assets/Logo-FlatOut.png
-Allow: /assets/favicon.png
+Allow: /assets/logo.webp
+Allow: /assets/Logo-FlatOut.webp
+Allow: /assets/favicon.webp
