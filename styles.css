@@ -13,6 +13,23 @@ body {
   overflow-x: hidden;
 }
 
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -38,6 +55,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  gap: 3rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -50,10 +75,14 @@ body {
   list-style: none;
   gap: 2rem;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
@@ -62,6 +91,9 @@ body {
   font-weight: 500;
   transition: color 0.3s ease;
   position: relative;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:hover,
@@ -234,18 +266,28 @@ body {
 
 .instagram-btn {
   color: #b51725;
-  font-size: 2em;
-  margin-left: 0;
-  transition: color 0.2s;
+  font-size: 1.8rem;
+  margin-left: 0.3rem;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   text-decoration: none;
   box-shadow: none;
+  padding: 12px 16px;
+  border-radius: 25px;
+  /* background: linear-gradient(135deg, rgba(181, 23, 37, 0.15), rgba(181, 23, 37, 0.25)); */
+  /* border: 2px solid rgba(181, 23, 37, 0.3); */
+  min-height: 44px;
+  font-weight: 600;
 }
 
 .instagram-btn:hover {
-  color: #ff3c00;
+  color: #fff;
   text-decoration: none;
+  background: linear-gradient(135deg, #b51725, #dc2626);
+  border-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(181, 23, 37, 0.4);
 }
 
 .btn {
@@ -1317,9 +1359,13 @@ featured-project img {
 
   .instagram-btn {
     margin-left: 0;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     justify-content: center;
     align-self: center;
+    font-size: 2rem;
+    padding: 16px 24px;
+    border-radius: 30px;
+    min-width: 200px;
   }
 
   .hero-content {

@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://flatouthomologaciones.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Disallow unnecessary files
+Disallow: /assets/
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Allow important assets
+Allow: /assets/logo.png
+Allow: /assets/logo2.png
+Allow: /assets/favicon.png
