@@ -1,3 +1,57 @@
+/* Font optimization and display settings */
+/* Override Font Awesome font-display for better performance */
+.fa, .fab, .fal, .far, .fas, .fa-solid, .fa-brands, .fa-regular, .fa-light {
+  font-display: swap !important;
+}
+
+/* Fallback fonts to reduce layout shifts */
+body {
+  font-family: "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-display: swap;
+}
+
+/* Additional Font Awesome optimization */
+/* Override Font Awesome CSS with font-display: swap */
+@supports (font-display: swap) {
+  @font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2") format("woff2"),
+         url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Font Awesome 6 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2") format("woff2"),
+         url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff") format("woff");
+  }
+}
+
+/* Prevent layout shifts while fonts load */
+.fa, .fab, .fas {
+  min-width: 1em;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Specific fallback for common icons */
+.fa-instagram::before {
+  content: "📷";
+}
+
+.fa-phone::before {
+  content: "📞";
+}
+
+.fa-envelope::before {
+  content: "✉️";
+}
+
 /* Reset and base styles */
 * {
   margin: 0;
