@@ -43,3 +43,5 @@ Despues de implementar seo en la pagina web quedan un par de cosas que se deben 
 Queda pendiente tambien trabajar el .htaccess ya que debemos de ajustar bien los links de redireccion para mejorar la estructura de la pagina web, aparte de implementar las paginas de error o acceso prohibido.
 
 hemos creado un archivo sitemap.xml, este debo de investigar como funciona y por ahora ajustar las Url's a mi dominio.
+
+Añadir <label> para <select> a los formularios para mejorar la accesibilidad!

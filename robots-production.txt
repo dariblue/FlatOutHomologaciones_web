@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap (temporal - cambiar al dominio final)
-Sitemap: https://flatout.bestdariblue.tech/sitemap.xml
+# Sitemap (producción)
+Sitemap: https://flatouthomologaciones.com/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1

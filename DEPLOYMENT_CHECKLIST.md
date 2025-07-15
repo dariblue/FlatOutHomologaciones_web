@@ -28,9 +28,19 @@ FINAL_URL=https://flatouthomologaciones.com
 
 # ARCHIVOS A ACTUALIZAR ANTES DEL LANZAMIENTO:
 # - index.html (og:image, twitter:image, JSON-LD logo e image)
-# - sitemap.xml (si se cambian las fechas)
-# - robots.txt (URL del sitemap)
+# - sitemap.xml (usar sitemap-production.xml)
+# - robots.txt (usar robots-production.txt)
 # - .htaccess (usar .htaccess-production)
+
+# ARCHIVOS ACTUALES (DESARROLLO):
+# - sitemap.xml: URLs con flatout.bestdariblue.tech
+# - robots.txt: Sitemap apunta al dominio temporal
+# - .htaccess: Sin redirecciones (para evitar bucles)
+
+# ARCHIVOS PARA PRODUCCIÓN:
+# - sitemap-production.xml: URLs con flatouthomologaciones.com
+# - robots-production.txt: Sitemap apunta al dominio final
+# - .htaccess-production: Con redirecciones completas
 
 # VERIFICACIONES POST-LANZAMIENTO:
 # - Google Search Console configurado para flatouthomologaciones.com

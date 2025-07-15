@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- SITEMAP PARA DESARROLLO (flatout.bestdariblue.tech) -->
-<!-- CAMBIAR URLs AL DOMINIO FINAL ANTES DEL LANZAMIENTO -->
+<!-- SITEMAP PARA PRODUCCIÓN (flatouthomologaciones.com) -->
+<!-- USAR ESTE ARCHIVO EN EL DOMINIO FINAL -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://flatout.bestdariblue.tech/</loc>
+        <loc>https://flatouthomologaciones.com/</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#homologaciones</loc>
+        <loc>https://flatouthomologaciones.com/#homologaciones</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#importaciones</loc>
+        <loc>https://flatouthomologaciones.com/#importaciones</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#proyectos</loc>
+        <loc>https://flatouthomologaciones.com/#proyectos</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#eventos</loc>
+        <loc>https://flatouthomologaciones.com/#eventos</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#historicos</loc>
+        <loc>https://flatouthomologaciones.com/#historicos</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#contacto</loc>
+        <loc>https://flatouthomologaciones.com/#contacto</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
