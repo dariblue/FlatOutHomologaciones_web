@@ -1,7 +1,7 @@
 # =============================================
-# HTACCESS PARA DESARROLLO (flatout.bestdariblue.tech)
+# HTACCESS PARA PRODUCCIÓN (flatouthomologaciones.com)
 # =============================================
-# NOTA: Modificar antes del lanzamiento final
+# USAR ESTE ARCHIVO EN EL DOMINIO FINAL
 
 # Enable compression
 <IfModule mod_deflate.c>
@@ -39,25 +39,24 @@
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# =============================================
-# REDIRECTS DESACTIVADOS PARA DESARROLLO
-# =============================================
-# Estas reglas se activarán solo en producción
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^flatouthomologaciones\.com$ [NC]
+RewriteRule ^(.*)$ https://flatouthomologaciones.com/$1 [L,R=301]
 
-# HTTPS redirect (solo si el servidor temporal soporta HTTPS)
-# RewriteEngine On
-# RewriteCond %{HTTPS} off
-# RewriteCond %{HTTP_HOST} ^flatouthomologaciones\.com$ [NC]
-# RewriteRule ^(.*)$ https://flatouthomologaciones.com/$1 [L,R=301]
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.flatouthomologaciones\.com$ [NC]
+RewriteRule ^(.*)$ https://flatouthomologaciones.com/$1 [R=301,L]
 
-# WWW redirect (solo para dominio final)
-# RewriteCond %{HTTP_HOST} ^www\.flatouthomologaciones\.com$ [NC]
-# RewriteRule ^(.*)$ https://flatouthomologaciones.com/$1 [R=301,L]
+# Redirect from temporary domain to final domain
+RewriteCond %{HTTP_HOST} ^flatout\.bestdariblue\.tech$ [NC]
+RewriteRule ^(.*)$ https://flatouthomologaciones.com/$1 [R=301,L]
 
-# Pretty URLs (activar solo si es necesario)
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^([^/]+)/?$ index.html#$1 [L,QSA]
+# Pretty URLs (opcional)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ index.html#$1 [L,QSA]
 
 # Error pages
 ErrorDocument 404 /404.html
