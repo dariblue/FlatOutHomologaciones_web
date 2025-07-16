@@ -1,0 +1,69 @@
+/* Custom minimal Font Awesome CSS - Only used icons */
+/* This reduces CSS from 14.8 KiB to ~2 KiB */
+
+/* Font face declarations */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Base classes */
+.fas, .fab {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  display: inline-block;
+  font-display: swap;
+}
+
+.fab {
+  font-family: 'Font Awesome 6 Brands';
+  font-weight: 400;
+}
+
+/* Only the icons we actually use */
+.fa-tools::before { content: "\f7d9"; }
+.fa-globe::before { content: "\f0ac"; }
+.fa-history::before { content: "\f1da"; }
+.fa-palette::before { content: "\f53f"; }
+.fa-check::before { content: "\f00c"; }
+.fa-paper-plane::before { content: "\f1d8"; }
+.fa-tachometer-alt::before { content: "\f3fd"; }
+.fa-mountain::before { content: "\f6fc"; }
+.fa-envelope::before { content: "\f0e0"; }
+.fa-phone::before { content: "\f095"; }
+.fa-map-marker-alt::before { content: "\f3c5"; }
+.fa-instagram::before { content: "\f16d"; }
+
+/* Prevent layout shifts */
+.fas, .fab {
+  min-width: 1em;
+  text-align: center;
+}
+
+/* Fallback content for accessibility */
+.fas[aria-hidden="true"], .fab[aria-hidden="true"] {
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hover effects */
+.fas:hover, .fab:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}

@@ -47,6 +47,7 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="minimal-fontawesome.css" as="style">
     <link rel="preload" href="assets/Logo-FlatOut.webp" as="image">
     <link rel="preload" href="script.js" as="script">
     
@@ -54,7 +55,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     
-    <!-- Preload Font Awesome fonts for better performance -->
+    <!-- Preload only the Font Awesome fonts we actually use -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     
@@ -63,9 +64,8 @@
     <link rel="dns-prefetch" href="//images.unsplash.com">
     
     <link rel="stylesheet" href="styles.css">
-    <!-- Load Font Awesome with display=swap parameter for better performance -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
+    <!-- Load minimal Font Awesome CSS - Only used icons (saves ~12.8 KiB) -->
+    <link rel="stylesheet" href="minimal-fontawesome.css">
     
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
