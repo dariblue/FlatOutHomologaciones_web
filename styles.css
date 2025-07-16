@@ -1509,7 +1509,9 @@ featured-project img {
   }
 
   .hero-logo-image {
-    max-height: 250px;
+    width: 300px;
+    height: 53px;
+    max-width: 90vw;
   }
 
   /* Botón "Enviar consulta" centrado y ancho armónico */
