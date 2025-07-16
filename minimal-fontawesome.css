@@ -48,6 +48,7 @@
 .fa-phone::before { content: "\f095"; }
 .fa-map-marker-alt::before { content: "\f3c5"; }
 .fa-instagram::before { content: "\f16d"; }
+.fa-arrow-up::before { content: "\f062"; }
 
 /* Prevent layout shifts */
 .fas, .fab {
