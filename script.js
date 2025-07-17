@@ -17,6 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.remove("active")
       }),
     )
+
+    // Close mobile menu when window resizes to desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 920) {
+        hamburger.classList.remove("active")
+        navMenu.classList.remove("active")
+      }
+    })
   }
 
   // Smooth scrolling for navigation links
