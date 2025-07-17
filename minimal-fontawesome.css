@@ -49,7 +49,7 @@
 .fa-map-marker-alt::before { content: "\f3c5"; }
 .fa-instagram::before { content: "\f16d"; }
 .fa-arrow-up::before { content: "\f062"; }
-
+.fa-comment::before { content: "\f075"; }
 /* Prevent layout shifts */
 .fas, .fab {
   min-width: 1em;
