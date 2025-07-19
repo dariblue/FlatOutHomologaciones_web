@@ -1,6 +1,6 @@
 /* Font optimization and display settings */
 /* Override Font Awesome font-display for better performance */
-.fa, .fab, .fal, .far, .fas, .fa-solid, .fa-brands, .fa-regular, .fa-light {
+.fab, .fas, .fa-solid, .fa-brands {
   font-display: swap !important;
 }
 
@@ -40,17 +40,6 @@ body {
 }
 
 /* Specific fallback for common icons */
-.fa-instagram::before {
-  content: "📷";
-}
-
-.fa-phone::before {
-  content: "📞";
-}
-
-.fa-envelope::before {
-  content: "✉️";
-}
 
 /* Reset and base styles */
 * {
@@ -269,35 +258,6 @@ img, video, iframe {
   z-index: 1;
 }
 
-/* Hero Slide Indicators (optional) */
-.hero-indicators {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  z-index: 3;
-}
-
-.hero-indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.hero-indicator.active {
-  background: #dc2626;
-  transform: scale(1.2);
-}
-
-.hero-indicator:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
 .hero-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -496,52 +456,6 @@ featured-project img {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.service-card {
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e9ecef;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.service-card i {
-  font-size: 3rem;
-  color: #dc2626;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover i {
-  transform: scale(1.1);
-}
-
-.service-card h3 {
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-  font-size: 1.3rem;
-}
-
-.service-card p {
-  color: #666;
-  line-height: 1.6;
 }
 
 /* New About Section Styles */
@@ -753,56 +667,6 @@ featured-project img {
 
 .bg-dark {
   background-color: #0d1117;
-}
-
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background-color: #2d2d2d;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.05);
-}
-
-.project-info {
-  padding: 1.5rem;
-}
-
-.project-info h3 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.project-info p {
-  color: #ccc;
-  text-align: left;
-  margin: 0;
-  font-size: 0.95rem;
 }
 
 /* Import Process */
@@ -1321,6 +1185,18 @@ featured-project img {
   }
 }
 
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.35);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5);
+  }
+  100% {
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.35);
+  }
+}
+
 /* Kit Cards Styles */
 .kit-cards-grid {
   display: grid;
@@ -1447,25 +1323,60 @@ featured-project img {
 
 .btn-kit {
   width: 100%;
-  background: linear-gradient(45deg, #dc2626, #b91c1c);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: bold;
+  padding: 1.2rem 2rem;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+  gap: 0.7rem;
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.35);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1.5rem;
+  animation: buttonPulse 3s ease-in-out infinite;
+}
+
+.btn-kit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-kit:hover::before {
+  left: 100%;
+}
+
+.btn-kit i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
 .btn-kit:hover {
-  background: linear-gradient(45deg, #b91c1c, #991b1b);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(220, 38, 38, 0.5);
+}
+
+.btn-kit:hover i {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.btn-kit:active {
+  transform: translateY(-2px) scale(0.98);
   box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
 }
 
@@ -1652,13 +1563,6 @@ featured-project img {
   margin-top: 3rem;
 }
 
-.faq-cta-text {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #555;
-  font-weight: 500;
-}
-
 .faq-button {
   font-size: 1.1rem;
   padding: 15px 35px;
@@ -1689,10 +1593,6 @@ featured-project img {
   
   .faq-section .faq-intro {
     font-size: 1rem;
-  }
-  
-  .faq-cta-text {
-    font-size: 1.1rem;
   }
   
   .faq-button {
@@ -1856,6 +1756,15 @@ featured-project img {
     padding: 0 10px !important;
   }
   
+  /* Separate logo from buttons more */
+  .hero-image {
+    margin-bottom: 3rem !important;
+  }
+  
+  .hero-buttons {
+    margin-top: 3rem !important;
+  }
+  
   .hero-content h1 {
     font-size: 2rem !important;
     margin-bottom: 1rem;
@@ -1888,9 +1797,7 @@ featured-project img {
   }
   
   /* Grid adjustments */
-  .benefits-grid,
-  .services-grid,
-  .projects-grid {
+  .benefits-grid {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
   }
@@ -1917,17 +1824,26 @@ featured-project img {
   .kit-card {
     padding: 1rem !important;
     margin: 0 5px !important;
+    text-align: center !important;
   }
   
-  /* Service cards mobile fix */
-  .service-card {
-    padding: 1rem !important;
-    margin: 0 5px !important;
+  .kit-header,
+  .kit-content,
+  .kit-features {
+    text-align: center !important;
   }
   
-  /* Project cards mobile fix */
-  .project-card {
-    margin: 0 5px !important;
+  .kit-features li {
+    justify-content: center !important;
+  }
+  
+  .kit-price {
+    text-align: center !important;
+  }
+  
+  .price-amount,
+  .price-note {
+    text-align: center !important;
   }
   
   /* Form improvements */
@@ -1950,6 +1866,17 @@ featured-project img {
     font-size: 0.9rem !important;
     min-width: auto !important;
     width: auto !important;
+  }
+  
+  .btn-kit {
+    padding: 1rem 1.5rem !important;
+    font-size: 1rem !important;
+    border-radius: 12px !important;
+    margin-top: 1rem !important;
+  }
+  
+  .btn-kit i {
+    font-size: 1.1rem !important;
   }
   
   .hero-buttons {
@@ -2043,6 +1970,16 @@ featured-project img {
     font-size: 0.85rem !important;
   }
   
+  .btn-kit {
+    padding: 0.9rem 1.3rem !important;
+    font-size: 0.95rem !important;
+    border-radius: 10px !important;
+  }
+  
+  .btn-kit i {
+    font-size: 1rem !important;
+  }
+  
   /* Text sizing for small screens */
   h1 { font-size: 1.7rem !important; }
   h2 { font-size: 1.6rem !important; }
@@ -2053,6 +1990,35 @@ featured-project img {
   /* Extra mobile fixes */
   .kit-card {
     padding: 0.8rem !important;
+    text-align: center !important;
+  }
+  
+  .kit-header,
+  .kit-content,
+  .kit-features {
+    text-align: center !important;
+  }
+  
+  .kit-features li {
+    justify-content: center !important;
+  }
+  
+  .kit-price {
+    text-align: center !important;
+  }
+  
+  .price-amount,
+  .price-note {
+    text-align: center !important;
+  }
+  
+  /* Hero spacing adjustments */
+  .hero-image {
+    margin-bottom: 3.5rem !important;
+  }
+  
+  .hero-buttons {
+    margin-top: 3.5rem !important;
   }
   
   .service-card {
@@ -2069,9 +2035,6 @@ featured-project img {
     grid-template-columns: 1fr !important;
   }
   
-  .services-grid {
-    grid-template-columns: 1fr !important;
-  }
 }
 
 @media (max-width: 375px) {
@@ -2146,6 +2109,22 @@ featured-project img {
   .project-card {
     padding: 0.5rem !important;
     margin: 0 2px !important;
+    text-align: center !important;
+  }
+  
+  .kit-header,
+  .kit-content,
+  .kit-features {
+    text-align: center !important;
+  }
+  
+  /* Extra hero spacing for tiny screens */
+  .hero-image {
+    margin-bottom: 4rem !important;
+  }
+  
+  .hero-buttons {
+    margin-top: 4rem !important;
   }
   
   .historic-requirements,
@@ -2155,8 +2134,6 @@ featured-project img {
   
   /* Ensure all grids are single column */
   .kit-cards-grid,
-  .services-grid,
-  .projects-grid,
   .benefits-grid,
   .featured-projects,
   .historic-info {
@@ -2176,6 +2153,16 @@ featured-project img {
   .form-group textarea {
     padding: 6px !important;
     font-size: 0.85rem !important;
+  }
+  
+  .btn-kit {
+    padding: 0.8rem 1rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
+  }
+  
+  .btn-kit i {
+    font-size: 0.95rem !important;
   }
 }
 
@@ -2205,6 +2192,22 @@ featured-project img {
   .historic-benefits {
     padding: 0.3rem !important;
     margin: 0 1px !important;
+    text-align: center !important;
+  }
+  
+  .kit-header,
+  .kit-content,
+  .kit-features {
+    text-align: center !important;
+  }
+  
+  /* Maximum hero spacing for ultra small screens */
+  .hero-image {
+    margin-bottom: 3rem !important;
+  }
+  
+  .hero-buttons {
+    margin-top: 3rem !important;
   }
   
   .contact-form {
@@ -2228,5 +2231,15 @@ featured-project img {
   h3 { font-size: 1.1rem !important; }
   h4 { font-size: 1rem !important; }
   p, li { font-size: 0.8rem !important; }
+  
+  .btn-kit {
+    padding: 0.7rem 0.8rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 6px !important;
+  }
+  
+  .btn-kit i {
+    font-size: 0.9rem !important;
+  }
 }
 
