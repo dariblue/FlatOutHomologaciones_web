@@ -2067,6 +2067,86 @@ featured-project img {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
     text-align: center !important;
+    justify-items: center !important;
+  }
+  .footer-logo,
+  .footer-links,
+  .footer-contact {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .footer-logo p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .footer-contact p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .social-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+  }
+  .social-link {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .footer-bottom {
+    text-align: center !important;
+  }
+  /* Eslogan en footer */
+  .footer-logo p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* Centrar botón de enviar consulta */
+  .contact-form button[type="submit"] {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  /* Centrar botones de solicitar presupuesto */
+  .btn-kit {
+    display: block !important;
+    margin: 0 auto 1rem auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+  /* Centrar eslogan en hero */
+  .hero-title,
+  .hero-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* Centrar contacto en sección contacto */
+  .contact-info {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+  }
+  .contact-item {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
   }
   
   /* Text and content sizing */
