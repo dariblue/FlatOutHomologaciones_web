@@ -1,3 +1,26 @@
+  .contact-info {
+    align-items: center !important;
+    gap: 1.2rem !important;
+  }
+  .contact-item {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 0.8rem 0.5rem !important;
+    margin: 0 auto 10px auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .contact-item h4, .contact-item p {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .contact-item i {
+    margin-right: 10px !important;
+    margin-left: 0 !important;
+    font-size: 1.3rem !important;
+  }
 /* Oculta visualmente pero mantiene accesibilidad para screen readers */
 .visually-hidden {
   position: absolute !important;
