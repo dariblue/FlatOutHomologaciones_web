@@ -771,12 +771,16 @@ featured-project img {
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .project-details h3 {
   color: #fff;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .project-details p {
@@ -784,6 +788,7 @@ featured-project img {
   margin-bottom: 1rem;
   text-align: left;
   line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .project-details .tags-container {
@@ -1725,7 +1730,93 @@ featured-project img {
   }
 }
 
-/* General Mobile Responsive Styles */
+/* Additional mobile viewport fixes for real devices */
+@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .featured-project {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+    min-height: auto !important;
+    max-width: 100% !important;
+    margin: 0 auto 2rem auto !important;
+    background: #2d2d2d !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+  
+  .featured-project img {
+    width: 100% !important;
+    height: 250px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    border-radius: 0 !important;
+  }
+  
+  .project-details {
+    width: 100% !important;
+    padding: 1.5rem !important;
+    background: #2d2d2d !important;
+    position: relative !important;
+    z-index: 10 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .project-details h3 {
+    color: #fff !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 0.8rem !important;
+    text-align: left !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+  }
+  
+  .project-details p {
+    color: #ccc !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+  
+  .project-details ul {
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+  }
+  
+  .project-details li {
+    color: #ccc !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.5rem !important;
+    padding-left: 1.2rem !important;
+  }
+  
+  .project-details li:before {
+    color: #dc2626 !important;
+    font-weight: bold !important;
+  }
+  
+  .tags-container {
+    margin-top: 1rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid #444 !important;
+  }
+  
+  .project-tag {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.6rem !important;
+    margin-right: 0.4rem !important;
+    margin-bottom: 0.4rem !important;
+    display: inline-block !important;
+  }
+}
 @media (max-width: 768px) {
   /* Global mobile fixes */
   * {
@@ -1805,8 +1896,65 @@ featured-project img {
   /* Featured projects mobile fix */
   .featured-project {
     grid-template-columns: 1fr !important;
-    gap: 1rem !important;
+    gap: 0 !important;
     min-height: auto !important;
+    border-radius: 10px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .featured-project img {
+    min-height: 250px !important;
+    max-height: 250px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    border-radius: 10px 10px 0 0 !important;
+  }
+  
+  .project-details {
+    padding: 1.5rem !important;
+    min-height: auto !important;
+    background: #2d2d2d !important;
+    border-radius: 0 0 10px 10px !important;
+  }
+  
+  .project-details h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.8rem !important;
+    color: #fff !important;
+    text-align: left !important;
+  }
+  
+  .project-details p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+    color: #ccc !important;
+    text-align: left !important;
+  }
+  
+  .project-details ul {
+    margin: 1rem 0 !important;
+  }
+  
+  .project-details li {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.5rem !important;
+    color: #ccc !important;
+  }
+  
+  .tags-container {
+    margin-top: 1rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid #444 !important;
+  }
+  
+  .project-tag {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.6rem !important;
+    margin-right: 0.4rem !important;
+    margin-bottom: 0.3rem !important;
   }
   
   /* Historic info mobile fix */
@@ -2001,6 +2149,41 @@ featured-project img {
   
   .kit-features li {
     justify-content: center !important;
+  }
+  
+  /* Featured projects extra mobile fixes */
+  .featured-project {
+    margin-bottom: 1rem !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .featured-project img {
+    min-height: 200px !important;
+    max-height: 200px !important;
+  }
+  
+  .project-details {
+    padding: 1rem !important;
+  }
+  
+  .project-details h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  
+  .project-details p {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  
+  .project-details li {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  
+  .project-tag {
+    font-size: 0.65rem !important;
+    padding: 0.25rem 0.5rem !important;
   }
   
   .kit-price {
