@@ -1,3 +1,15 @@
+/* Oculta visualmente pero mantiene accesibilidad para screen readers */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 /* Font optimization and display settings */
 /* Override Font Awesome font-display for better performance */
 .fab, .fas, .fa-solid, .fa-brands {
@@ -981,20 +993,52 @@ featured-project img {
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #444;
+  border: 1px solid #dc2626;
   border-radius: 8px;
-  background-color: #1a1a1a;
+  background-color: #222;
   color: #fff;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  margin-bottom: 16px;
+  box-shadow: 0 0 0 2px rgba(220,38,38,0.08);
+  transition: border-color 0.2s;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #dc2626;
+  border-color: #fff;
   box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+}
+
+/* Mejora la visibilidad y el estilo del label y select en el formulario de contacto */
+.contact-form label {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.contact-form select {
+  background: #222;
+  color: #fff;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 16px;
+  appearance: none;
+  box-shadow: 0 0 0 2px rgba(220,38,38,0.08);
+  transition: border-color 0.2s;
+  display: block;
+}
+
+.contact-form select:focus {
+  border-color: #fff;
+  outline: none;
 }
 
 .contact-info {
@@ -2430,7 +2474,7 @@ featured-project img {
   }
   
   .btn-kit i {
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
   }
 }
 

@@ -671,16 +671,19 @@
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
+                            <label for="name" class="visually-hidden">Nombre completo</label>
                             <input type="text" id="name" name="name" placeholder="Nombre completo" required>
                         </div>
                         <div class="form-group">
+                            <label for="email" class="visually-hidden">Email</label>
                             <input type="email" id="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
+                            <label for="phone" class="visually-hidden">Teléfono</label>
                             <input type="tel" id="phone" name="phone" placeholder="Teléfono">
                         </div>
                         <div class="form-group">
-                            <label for="service">Servicio *</label>
+                            <label for="service" class="visually-hidden">Servicio</label>
                             <select id="service" name="service" required>
                                 <option value="">Selecciona un servicio</option>
                                 <option value="homologacion">Homologación</option>
@@ -690,8 +693,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Cuéntanos tu proyecto..." rows="5"
-                                required></textarea>
+                            <label for="message" class="visually-hidden">Cuéntanos tu proyecto</label>
+                            <textarea id="message" name="message" placeholder="Cuéntanos tu proyecto..." rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar consulta</button>
                     </form>
