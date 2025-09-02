@@ -1043,19 +1043,24 @@ featured-project img {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #ff0000;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
   padding: 0.8rem 1.2rem;
-  background-color: #2d2d2d;
+  background: #1a1a1a;
   border-radius: 25px;
+  border: 2px solid #dc2626;
+  box-shadow: 0 0 16px 0 rgba(220,38,38,0.35), 0 2px 8px rgba(220,38,38,0.15);
+  animation: buttonPulse 3s ease-in-out infinite;
 }
 
 .social-link:hover {
   color: #fff;
-  background-color: #ff0000;
-  transform: translateY(-2px);
+  background: #dc2626;
+  border-color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 32px 0 rgba(220,38,38,0.5), 0 8px 32px rgba(220,38,38,0.25);
 }
 
 /* Footer */
