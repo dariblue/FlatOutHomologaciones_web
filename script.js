@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, observerOptions)
 
   // Observe elements for animation
-  const animatedElements = document.querySelectorAll(".service-card, .project-card, .event-card, .process-step, .kit-card")
+  const animatedElements = document.querySelectorAll(".kit-card, .event-card, .process-step")
   animatedElements.forEach((el) => {
     observer.observe(el)
   })
@@ -165,18 +165,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Add interactive effects to service cards
-  document.querySelectorAll(".service-card").forEach((card) => {
-    card.addEventListener("mouseenter", function () {
-      this.style.transform = "translateY(-10px) scale(1.02)"
-    })
+  // Initialize any additional features
+  initializeCounters()
 
-    card.addEventListener("mouseleave", function () {
-      this.style.transform = "translateY(0) scale(1)"
-    })
-  })
-
-  // Create and add scroll to top button
+  // Hero Background Slider
+  initializeHeroSlider()
   const scrollToTopBtn = document.createElement("button")
   scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>'
   scrollToTopBtn.className = "scroll-to-top"
@@ -235,7 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add loading state
   window.addEventListener("load", () => {
-    document.body.classList.add("loaded")
     console.log("FlatOut website loaded successfully!")
   })
 
@@ -259,13 +251,14 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   // Initialize any additional features
-  initializeCounters()
 
   // Hero Background Slider
   initializeHeroSlider()
 
   // Initialize kit modal functionality
   initializeKitModal()
+
+  // Create and add scroll to top button
 })
 
 // Hero Background Slider function
@@ -302,38 +295,6 @@ function initializeHeroSlider() {
       currentSlide = (currentSlide - 1 + slides.length) % slides.length
       showSlide(currentSlide)
     }
-  })
-}
-
-// Counter animation function
-function initializeCounters() {
-  const counters = document.querySelectorAll(".counter")
-
-  counters.forEach((counter) => {
-    const target = Number.parseInt(counter.getAttribute("data-target"))
-    const increment = target / 100
-
-    function updateCounter() {
-      const current = Number.parseInt(counter.innerText)
-      if (current < target) {
-        counter.innerText = Math.ceil(current + increment)
-        setTimeout(updateCounter, 20)
-      } else {
-        counter.innerText = target
-      }
-    }
-
-    // Start counter when element is visible
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          updateCounter()
-          observer.unobserve(entry.target)
-        }
-      })
-    })
-
-    observer.observe(counter)
   })
 }
 
