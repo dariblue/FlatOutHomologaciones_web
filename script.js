@@ -109,7 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }, observerOptions)
 
   // Observe elements for animation
-  const animatedElements = document.querySelectorAll(".kit-card, .event-card, .process-step")
+  const animatedElements = document.querySelectorAll(
+    ".kit-card, .event-card, .process-step, .featured-project, .past-event-card, .benefit-item, .contact-item",
+  )
   animatedElements.forEach((el) => {
     observer.observe(el)
   })
@@ -165,11 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Initialize any additional features
-  initializeCounters()
-
   // Hero Background Slider
   initializeHeroSlider()
+  
   const scrollToTopBtn = document.createElement("button")
   scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>'
   scrollToTopBtn.className = "scroll-to-top"
@@ -251,9 +251,6 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   // Initialize any additional features
-
-  // Hero Background Slider
-  initializeHeroSlider()
 
   // Initialize kit modal functionality
   initializeKitModal()
@@ -493,3 +490,35 @@ Fecha: ${new Date().toLocaleString('es-ES')}
     })
   })
 }
+
+// Time Ago Calculation for Events
+function updateTimeAgo() {
+  const timeAgoElements = document.querySelectorAll('.time-ago');
+  
+  timeAgoElements.forEach(element => {
+    const dateStr = element.getAttribute('data-date');
+    if (!dateStr) return;
+    
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffTime = Math.abs(now - date);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
+    const diffWeeks = Math.floor(diffDays / 7);
+    
+    let timeString = '';
+    
+    if (diffDays === 0) {
+        timeString = 'Hoy';
+    } else if (diffDays === 1) {
+        timeString = 'Ayer';
+    } else if (diffDays < 7) {
+        timeString = `Hace ${diffDays} días`;
+    } else {
+        timeString = `Hace ${diffWeeks} semanas`;
+    }
+    
+    element.textContent = timeString;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', updateTimeAgo);
