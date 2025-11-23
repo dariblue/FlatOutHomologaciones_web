@@ -984,6 +984,10 @@ featured-project img {
   font-size: 0.9rem;
 }
 
+.event-info {
+  flex: 1;
+}
+
 .event-info h3 {
   color: #fff;
   margin-bottom: 0.5rem;
@@ -1094,11 +1098,13 @@ featured-project img {
 }
 
 @media (max-width: 900px) {
-  .events-two-column {
+  .events-split-layout {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .event-card.past-event .event-image {
-    height: 180px;
+  
+  .past-events-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2844,6 +2850,22 @@ featured-project img {
 @media (max-width: 600px) {
   .past-events-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .events-split-layout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .past-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .column-title {
+    display: table;
+    margin: 0 auto 2rem auto;
   }
 }
 
