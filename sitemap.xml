@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- SITEMAP PARA DESARROLLO (flatout.bestdariblue.tech) -->
+<!-- SITEMAP PARA DESARROLLO (flatout.dariblue.dev) -->
 <!-- CAMBIAR URLs AL DOMINIO FINAL ANTES DEL LANZAMIENTO -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://flatout.bestdariblue.tech/</loc>
+        <loc>https://flatout.dariblue.dev/</loc>
         <lastmod>2025-11-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#importaciones</loc>
+        <loc>https://flatout.dariblue.dev/#importaciones</loc>
         <lastmod>2025-11-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#proyectos</loc>
+        <loc>https://flatout.dariblue.dev/#proyectos</loc>
         <lastmod>2025-11-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#eventos</loc>
+        <loc>https://flatout.dariblue.dev/#eventos</loc>
         <lastmod>2025-11-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#historicos</loc>
+        <loc>https://flatout.dariblue.dev/#historicos</loc>
         <lastmod>2025-11-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://flatout.bestdariblue.tech/#contacto</loc>
+        <loc>https://flatout.dariblue.dev/#contacto</loc>
         <lastmod>2025-11-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

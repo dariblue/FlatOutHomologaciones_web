@@ -2,7 +2,10 @@ User-agent: *
 Allow: /
 
 # Sitemap (temporal - cambiar al dominio final)
-Sitemap: https://flatout.bestdariblue.tech/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://flatout.dariblue.dev/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1

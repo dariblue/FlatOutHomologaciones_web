@@ -45,3 +45,8 @@ Queda pendiente tambien trabajar el .htaccess ya que debemos de ajustar bien los
 hemos creado un archivo sitemap.xml, este debo de investigar como funciona y por ahora ajustar las Url's a mi dominio.
 
 Añadir <label> para <select> a los formularios para mejorar la accesibilidad!
+
+
+
+
+añadir a importaciones emiratos arabes y añadir el ferrari 

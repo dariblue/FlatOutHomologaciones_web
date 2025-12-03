@@ -14,13 +14,13 @@
 # ==============================================
 
 # URL ACTUAL DE DESARROLLO (temporal)
-CURRENT_URL=https://flatout.bestdariblue.tech
+CURRENT_URL=https://flatout.dariblue.dev
 
 # URL FINAL DE PRODUCCIÓN (mantener en SEO)
 FINAL_URL=https://flatouthomologaciones.com
 
 # ANTES DEL LANZAMIENTO FINAL:
-# 1. Cambiar todas las URLs de imágenes de flatout.bestdariblue.tech a flatouthomologaciones.com
+# 1. Cambiar todas las URLs de imágenes de flatout.dariblue.dev a flatouthomologaciones.com
 # 2. REEMPLAZAR .htaccess con .htaccess-production
 # 3. Configurar DNS para flatouthomologaciones.com
 # 4. Verificar que todos los assets estén disponibles en el dominio final
@@ -33,7 +33,7 @@ FINAL_URL=https://flatouthomologaciones.com
 # - .htaccess (usar .htaccess-production)
 
 # ARCHIVOS ACTUALES (DESARROLLO):
-# - sitemap.xml: URLs con flatout.bestdariblue.tech
+# - sitemap.xml: URLs con flatout.dariblue.dev
 # - robots.txt: Sitemap apunta al dominio temporal
 # - .htaccess: Sin redirecciones (para evitar bucles)
 
